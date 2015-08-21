@@ -1,0 +1,11 @@
+version: 1.0.0
+description: Translation Handling
+author: Mario Micklisch
+license: 
+copyright: 
+
+name: de.hpm.translate
+moduleid: de.hpm.translate
+guid: 00000000-0000-0000-0000-000000000003
+platform: commonjs
+minsdk: 3.0.0

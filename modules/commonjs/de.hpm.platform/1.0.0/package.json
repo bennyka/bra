@@ -1,0 +1,9 @@
+{
+    "description": "Platform Utilities",
+    "directories": {
+        "lib": "."
+    },
+    "main": "de.hpm.platform",
+    "name": "de.hpm.platform",
+    "version": "1.0.0"
+}

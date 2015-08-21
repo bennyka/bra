@@ -1,0 +1,9 @@
+{
+    "description": "Translation Handling",
+    "directories": {
+        "lib": "."
+    },
+    "main": "de.hpm.translate",
+    "name": "de.hpm.translate",
+    "version": "1.0.0"
+}

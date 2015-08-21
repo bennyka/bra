@@ -1,0 +1,12 @@
+version: 1.0.0
+description: Platform Utilities
+author: Mario Micklisch
+license: 
+copyright: 
+
+# these should not be edited
+name: de.hpm.platform
+moduleid: de.hpm.platform
+guid: 00000000-0000-0000-0000-000000000002
+platform: commonjs
+minsdk: 3.0.0
