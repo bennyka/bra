@@ -4,4 +4,8 @@
 	<string name="detailView">Detail View</string>
 	<string name="select">Please Enter A Value</string>
 	<string name="youEntered">You Entered: %s</string>
+
+
+	<string name="Start_New_Analyze">Start New Analyze</string>
+	<string name="Analyze_History">History</string>
 </resources>

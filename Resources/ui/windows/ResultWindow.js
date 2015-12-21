@@ -1,8 +1,8 @@
 var Platform = require('de.hpm.platform');
 
-function StartWindow() {
+function ResultWindow() {
 	//declare module dependencies
-	var StartView = require('ui/views/StartView');
+	var ResultView = require('ui/views/ResultView');
 
 	//create object instance
 	var self = Ti.UI.createWindow({
@@ -10,11 +10,10 @@ function StartWindow() {
 	});
 
 	//construct UI
-	var startView = new StartView();
-	self.add(startView);
-
+	var resultView = new ResultView();
+	self.add(resultView);
 
 	return self;
 };
 
-module.exports = StartWindow;
+module.exports = ResultWindow;
