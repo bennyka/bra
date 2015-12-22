@@ -1,18 +1,25 @@
 var Platform = require('de.hpm.platform');
 
-function StartWindow() {
+function StartWindow(params) {
+	var data = (params.data) ? params.data : {};
 	//declare module dependencies
 	var StartView = require('ui/views/StartView');
 
 	//create object instance
-	var self = Ti.UI.createWindow({
-		backgroundColor:'#ffffff'
+	var win = Ti.UI.createWindow({
+		backgroundColor:'#ffffff',
+		title:params.title
+	});
+
+	// create object instance
+	var self = Titanium.UI.iOS.createNavigationWindow({
+		window:win
 	});
 
 	//construct UI
-	var startView = new StartView();
-	self.add(startView);
-
+	data.navWin = self;
+	var startView = new StartView(data);
+	win.add(startView);
 
 	return self;
 };

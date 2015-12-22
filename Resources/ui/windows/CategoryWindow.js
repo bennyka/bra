@@ -1,16 +1,17 @@
 var Platform = require('de.hpm.platform');
 
-function CategoryWindow() {
+function CategoryWindow(params) {
 	//declare module dependencies
 	var CategoryView = require('ui/views/CategoryView');
 
 	//create object instance
 	var self = Ti.UI.createWindow({
-		backgroundColor:'#ffffff'
+		backgroundColor:'#ffffff',
+		title:params.title
 	});
 
 	//construct UI
-	var categoryView = new CategoryView();
+	var categoryView = new CategoryView(params.data);
 	self.add(categoryView);
 
 	return self;

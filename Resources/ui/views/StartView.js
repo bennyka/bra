@@ -1,8 +1,7 @@
 //Master View Component Constructor
 var View = require('/lib/view');
 var UI = require('/lib/ui');
-function StartView() {
-
+function StartView(params) {
 	//create object instance, parasitic subclass of Observable
 	var self = View.createView();
 
@@ -27,11 +26,13 @@ function StartView() {
 		borderRadius:5
 	});
 	buttonView.add(startNewAnalyzeContainer);
+	startNewAnalyzeContainer.addEventListener("click", createNewAnalyze);
 
 	var startNewAnalyzeTitle = Ti.UI.createLabel({
 		text:L('Start_New_Analyze'),
 		center:{x:'50%', y:'50%'},
-		font:UI.fontSize.startViewButtons
+		font:UI.fontSize.startViewButtons,
+		touchEnabled:false
 	});
 	startNewAnalyzeContainer.add(startNewAnalyzeTitle);
 
@@ -59,8 +60,13 @@ function StartView() {
 	*	FUNCTIONS
 	*/
 	function createNewAnalyze(){
-
-	}
+		var CategoryWin = require('ui/windows/CategoryWindow');
+		var categoryWin = new CategoryWin({
+			title:L('Categories'),
+			data:params
+		});
+		params.navWin.openWindow(categoryWin, {animate:true});
+	};
 
 	return self;
 };

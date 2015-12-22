@@ -45,6 +45,10 @@ if (Ti.version < 1.8) {
   var isTablet = checkTablet();
   console.log(isTablet);
 
-   var Window = require('ui/windows/StartWindow');
-   new Window().open();
+   var StartWindow = require('ui/windows/StartWindow');
+   var startWindow = new StartWindow({
+    title:L('Home')
+   });
+    Ti.API.error("type", typeof startWindow);
+    startWindow.open();
 })();
